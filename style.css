@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@0;1&family=Roboto:ital,wght@0,100;0,400;1,100;1,400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* navbar */
+.navbar {
+  background-color: #161616;
+  color: #a6d2c8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+}
+.hamburger {
+  display: none;
+}
+.scrolling {
+  background-color: #464747;
+}
+.navbar .logo img {
+  height: 3em;
+  margin-left: 2em;
+}
+.navbar .search img {
+  height: 1.5em;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar ul li {
+  padding: 20px;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* first page */
+.pippick {
+  background-color: #161616;
+  color: white;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(60vh, auto);
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+.details-container {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: repeat(7, 10vh);
+  grid-gap: 1em;
+}
+.pack-img {
+  grid-column: 2/3;
+  grid-row: 3;
+}
+.packpick-info {
+  grid-row: 4;
+  grid-column: 2/3;
+}
+.pack-illustration {
+  grid-column: 2/3;
+}
+/* page 2 */
+#page-2 {
+  min-height: 80vh;
+  font-family: "Josefin Sans", sans-serif;
+}
+.enter-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+textarea {
+  background-color: #f3f3f3;
+  border-radius: 20px;
+  padding: 20px;
+}
+.details h1 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  height: 2rem;
+  width: 5rem;
+  background: rgb(165, 212, 252);
+  border-radius: 20px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+  position: relative;
+}
+input:checked[type="checkbox"] {
+  background: rgb(109, 10, 10);
+  box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.7);
+}
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: rgb(241, 127, 127);
+  transition: 0.5s;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+input:checked[type="checkbox"]:before {
+  content: "";
+  /* transform: scale(1.1); */
+  /* position: absolute; */
+  left: 3rem;
+  transition: 0.5s;
+}
+.find {
+  margin-top: 1rem;
+  padding: 0.8em;
+  border-radius: 20px;
+  width: 10em;
+  font-size: 1em;
+  background-color: #161616;
+  color: #f3f3f3;
+}
+.footer {
+  background-color: black;
+  min-height: 20vh;
+  color: #f3f3f3;
+}
+.mfclogo img {
+  margin-top: 2rem;
+  height: 10vh;
+  width: 10vh;
+}
+.sep {
+  margin-left: 2em;
+}
+.moreinfo {
+  margin-bottom: 2rem;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.links {
+  margin-right: 40%;
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+}
+.links img {
+  height: 3.25rem;
+  width: 3.25rem;
+  padding: 10px;
+}
+.scroll-down {
+  position: absolute;
+  right: 50%;
+  bottom: 0em;
+}
+.select-pip-npm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.select-pip-npm p {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+@media screen and (max-width: 900px) {
+  .support,
+  .search,
+  .about {
+    display: none;
+    height: 0px;
+    width: 0px;
+  }
+  .hamburger {
+    display: block;
+  }
+  .enter-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  textarea {
+    width: 350px;
+  }
+  .pippick {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .pack-img {
+    display: none;
+  }
+  .details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    width: 100vw;
+    padding: 5px;
+  }
+  .mfclogo,
+  .moreinfo {
+    padding-left: 100px;
+  }
+  .details-container {
+    padding-left: 100px;
+  }
+}

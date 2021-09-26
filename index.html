@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img src="./pippick_logo-removebg-preview.png" alt="" />
+      </div>
+
+      <div class="help">
+        <ul>
+          <li>
+            <div class="support">
+              <p>Support</p>
+            </div>
+          </li>
+          <li>
+            <div class="about">
+              <p>About</p>
+            </div>
+          </li>
+          <li>
+            <div class="search">
+              <img src="./icons8-search-40.png" alt="" />
+            </div>
+          </li>
+          <li>
+            <div class="hamburger">
+              <img src="./icons8-menu-30.png" alt="" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="pippick">
+        <div class="details-container">
+          <div class="pack-img">
+            <img src="./image_9plogo.png" alt="" />
+          </div>
+          <div class="packpick-info">
+            <h1>NPM and PIP package recommender</h1>
+            <br /><br />
+            <ul>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Adipisci, iusto.
+              </li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pack-illustration">
+          <img src="./ill1.jpg" alt="" />
+        </div>
+        <div class="scroll-down">
+          <a href="#page-2">
+            <img src="./icons8-double-down-64.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="page-2">
+      <div class="enter-details">
+        <div class="enter-details-image">
+          <img src="./image_9middle_illustration.png" alt="" />
+        </div>
+        <div class="details">
+          <h1>Details of your project</h1>
+          <textarea name="textarea" rows="10" cols="50"></textarea>
+          <div class="select">
+            <h1>Select your packages</h1>
+            <div class="select-pip-npm">
+              <div class="pip"><p>pip</p></div>
+              <div class="toggle">
+                <input type="checkbox" id="toggle" />
+              </div>
+              <div class="npm"><p>npm</p></div>
+            </div>
+            <br />
+            <input type="button" value="FIND" class="find" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="sep">
+        <div class="mfclogo">
+          <img src="./logo white (1).png" alt="" />
+        </div>
+        <div class="moreinfo">
+          <h1>Join Us For More</h1>
+          <p>connect with us for more webinars,workshops and blogs</p>
+        </div>
+      </div>
+      <div class="links">
+        <a href="#"><img src="./icons8-instagram-logo-48.png" alt="" /></a>
+        <a href="#"><img src="./icons8-facebook-30.png" alt="" /></a>
+        <a href="#"><img src="./icons8-linkedin-30.png" alt="" /></a>
+        <a href="#"><img src="./icons8-youtube-play-button-48.png" alt="" /></a>
+      </div>
+    </section>
+    <script>
+      //   console.log(nav);
+      window.addEventListener("scroll", function () {
+        nav = document.querySelector(".navbar");
+        nav.classList.toggle("scrolling", window.scrollY > 0);
+      });
+    </script>
+    <script src="./smooth-scroll.polyfills.min.js"></script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]', {
+        speed: 50,
+      });
+    </script>
+  </body>
+</html>
